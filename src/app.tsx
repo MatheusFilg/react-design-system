@@ -27,6 +27,42 @@ export default function App() {
           <Button disabled>Button</Button>
         </div>
       </div>
+
+      <div className="flex flex-row items-center align-middle">
+        <Label>Primary</Label>
+        <div className="flex translate-x-6 flex-row gap-10">
+          <Button variant="primary" size="small">
+            Button
+          </Button>
+          <Button disabled size="small">
+            Button
+          </Button>
+        </div>
+      </div>
+
+      <div className="flex flex-row items-center align-middle">
+        <Label>Neutral</Label>
+        <div className="flex translate-x-6 flex-row gap-10">
+          <Button variant="neutral" size="small">
+            Button
+          </Button>
+          <Button disabled size="small">
+            Button
+          </Button>
+        </div>
+      </div>
+
+      <div className="flex flex-row items-center align-middle">
+        <Label>Ghost</Label>
+        <div className="flex translate-x-6 flex-row gap-10">
+          <Button variant="ghost" size="small">
+            Button
+          </Button>
+          <Button disabled size="small">
+            Button
+          </Button>
+        </div>
+      </div>
     </div>
   )
 }

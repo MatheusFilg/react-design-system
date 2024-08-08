@@ -2,16 +2,17 @@ import { ButtonHTMLAttributes, ReactNode } from 'react'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode
-  variant?: 'primary' | 'neutral' | 'ghost'
   disabledStyle?: string
   defaultStyle?: string
+  size?: 'small' | 'medium'
+  variant?: 'primary' | 'neutral' | 'ghost'
   //   icon?: ReactElement
 }
 
 export default function Button(props: ButtonProps) {
   const { variant } = props
 
-  const style = 'flex items-center w-18 h-10 border gap-4 rounded-lg p-3'
+  const style = 'flex items-center border gap-4 rounded-lg'
   const disable =
     ' disabled:border-[#B3B3B3] disabled:bg-[#D9D9D9] disabled:text-[#B3B3B3]'
 
@@ -22,6 +23,7 @@ export default function Button(props: ButtonProps) {
           disabledStyle={disable}
           defaultStyle={style}
           {...props}
+          size={props?.size ?? 'medium'}
         />
       )
     case 'neutral':
@@ -30,11 +32,17 @@ export default function Button(props: ButtonProps) {
           disabledStyle={disable}
           defaultStyle={style}
           {...props}
+          size={props?.size ?? 'medium'}
         />
       )
     case 'ghost':
       return (
-        <GhostButton disabledStyle={disable} defaultStyle={style} {...props} />
+        <GhostButton
+          disabledStyle={disable}
+          defaultStyle={style}
+          {...props}
+          size={props?.size ?? 'medium'}
+        />
       )
     default:
       return (
@@ -42,13 +50,20 @@ export default function Button(props: ButtonProps) {
           disabledStyle={disable}
           defaultStyle={style}
           {...props}
+          size={props?.size ?? 'medium'}
         />
       )
   }
 }
 
 export function DefaultButton(props: ButtonProps) {
-  const { children, defaultStyle, disabledStyle } = props
+  let { children, defaultStyle, disabledStyle, size } = props
+
+  if (size === 'medium') {
+    defaultStyle += ' w-18 h-10 p-3'
+  } else {
+    defaultStyle += ' w-16 h-8 p-2'
+  }
 
   return (
     <button
@@ -61,7 +76,13 @@ export function DefaultButton(props: ButtonProps) {
 }
 
 export function NeutralButton(props: ButtonProps) {
-  const { children, defaultStyle, disabledStyle } = props
+  let { children, defaultStyle, disabledStyle, size } = props
+
+  if (size === 'medium') {
+    defaultStyle += ' w-18 h-10 p-3'
+  } else {
+    defaultStyle += ' w-16 h-8 p-2'
+  }
 
   return (
     <button
@@ -74,7 +95,13 @@ export function NeutralButton(props: ButtonProps) {
 }
 
 export function GhostButton(props: ButtonProps) {
-  const { children, defaultStyle, disabledStyle } = props
+  let { children, defaultStyle, disabledStyle, size } = props
+
+  if (size === 'medium') {
+    defaultStyle += ' w-18 h-10 p-3'
+  } else {
+    defaultStyle += ' w-16 h-8 p-2'
+  }
 
   return (
     <button
@@ -82,19 +109,6 @@ export function GhostButton(props: ButtonProps) {
       {...props}
     >
       <span className="text-black">{children}</span>
-    </button>
-  )
-}
-
-export function DisabledButton(props: ButtonProps) {
-  const { children } = props
-
-  return (
-    <button
-      className="group w-20 gap-4 rounded-lg p-2 disabled:bg-[#D9D9D9]"
-      {...props}
-    >
-      <span className="group-disabled:text-[#B3B3B3]">{children}</span>
     </button>
   )
 }
