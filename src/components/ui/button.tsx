@@ -68,9 +68,9 @@ export function DefaultButton(props: ButtonProps) {
   return (
     <button
       {...props}
-      className={`${disabledStyle} ${defaultStyle} border-[#2C2C2C] bg-[#2C2C2C] hover:bg-[#1E1E1E]`}
+      className={`${disabledStyle} ${defaultStyle} border-[#2C2C2C] bg-[#2C2C2C] text-white hover:bg-[#1E1E1E]`}
     >
-      <span className="text-white">{children}</span>
+      <span>{children}</span>
     </button>
   )
 }

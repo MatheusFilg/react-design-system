@@ -63,10 +63,11 @@ export function GroupLabel(props: LabelProps) {
 
   return (
     <div className="flex flex-row items-center">
-      <label className="flex h-8 w-20 items-center justify-center rounded-lg border border-[#B2B2B2] bg-[#CDCDCD] px-4 py-2">
+      <label className="flex h-8 w-20 items-center justify-center rounded-full border border-[#B2B2B2] bg-[#E3E3E3] px-4 py-2">
         {children}
       </label>
       <div className="h-[1px] w-6 bg-[#E3E3E3]" />
+      <div className="h-[200px] w-[2px] bg-[#E3E3E3]" />
     </div>
   )
 }
