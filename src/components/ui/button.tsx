@@ -6,7 +6,6 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   defaultStyle?: string
   size?: 'small' | 'medium'
   variant?: 'primary' | 'neutral' | 'ghost'
-  //   icon?: ReactElement
 }
 
 export default function Button(props: ButtonProps) {
