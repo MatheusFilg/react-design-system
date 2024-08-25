@@ -12,7 +12,8 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export default function Button(props: ButtonProps) {
   const { variant } = props
 
-  const style = 'flex items-center border gap-4 rounded-lg'
+  const style =
+    'flex items-center border gap-4 rounded-lg font-inter font-normal items-center justify-center'
   const disable =
     ' disabled:border-[#B3B3B3] disabled:bg-[#D9D9D9] disabled:text-[#B3B3B3]'
 
@@ -60,9 +61,9 @@ export function DefaultButton(props: ButtonProps) {
   let { children, defaultStyle, disabledStyle, size } = props
 
   if (size === 'medium') {
-    defaultStyle += ' w-18 h-10 p-3'
+    defaultStyle += ' w-18 h-10 p-3 text-base'
   } else {
-    defaultStyle += ' w-16 h-8 p-2'
+    defaultStyle += ' w-16 h-8 p-2 text-sm'
   }
 
   return (
@@ -79,9 +80,9 @@ export function NeutralButton(props: ButtonProps) {
   let { children, defaultStyle, disabledStyle, size } = props
 
   if (size === 'medium') {
-    defaultStyle += ' w-18 h-10 p-3'
+    defaultStyle += ' w-18 h-10 p-3 text-base'
   } else {
-    defaultStyle += ' w-16 h-8 p-2'
+    defaultStyle += ' w-16 h-8 p-2 text-sm'
   }
 
   return (
@@ -98,9 +99,9 @@ export function GhostButton(props: ButtonProps) {
   let { children, defaultStyle, disabledStyle, size } = props
 
   if (size === 'medium') {
-    defaultStyle += ' w-18 h-10 p-3'
+    defaultStyle += ' w-18 h-10 p-3 text-base'
   } else {
-    defaultStyle += ' w-16 h-8 p-2'
+    defaultStyle += ' w-16 h-8 p-2 text-sm'
   }
 
   return (

@@ -9,7 +9,8 @@ interface LabelProps {
 export default function Label(props: LabelProps) {
   const { variant } = props
 
-  const style = 'w-fit items-center justify-center border border-[#B2B2B2]'
+  const style =
+    'w-fit items-center justify-center border border-[#B2B2B2] font-roboto font-normal'
 
   switch (variant) {
     case 'horizontal':
@@ -59,11 +60,14 @@ export function VerticalLabel(props: LabelProps) {
 }
 
 export function GroupLabel(props: LabelProps) {
-  const { children } = props
+  const { children, defaultStyle } = props
 
   return (
     <div className="flex flex-row items-center">
-      <label className="flex h-8 w-20 items-center justify-center rounded-full border border-[#B2B2B2] bg-[#E3E3E3] px-4 py-2">
+      <label
+        {...props}
+        className={`${defaultStyle} flex h-8 rounded-full bg-[#E3E3E3] px-4 py-2`}
+      >
         {children}
       </label>
       <div className="h-[1px] w-6 bg-[#E3E3E3]" />
