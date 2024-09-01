@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes, ReactNode } from 'react'
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonIconProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode
   disabledstyle?: string
   defaultstyle?: string
@@ -8,7 +8,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'neutral' | 'ghost'
 }
 
-export default function Button(props: ButtonProps) {
+export default function ButtonIcon(props: ButtonIconProps) {
   const { variant } = props
 
   const style =
@@ -56,7 +56,7 @@ export default function Button(props: ButtonProps) {
   }
 }
 
-export function DefaultButton(props: ButtonProps) {
+export function DefaultButton(props: ButtonIconProps) {
   let { children, defaultstyle, disabledstyle, size } = props
 
   if (size === 'medium') {
@@ -68,14 +68,14 @@ export function DefaultButton(props: ButtonProps) {
   return (
     <button
       {...props}
-      className={`${disabledstyle} ${defaultstyle} rounded-lg border-[#2C2C2C] bg-[#2C2C2C] text-white hover:bg-[#1E1E1E]`}
+      className={`${disabledstyle} ${defaultstyle} rounded-full border-[#2C2C2C] bg-[#2C2C2C] text-white hover:bg-[#1E1E1E]`}
     >
       <span>{children}</span>
     </button>
   )
 }
 
-export function NeutralButton(props: ButtonProps) {
+export function NeutralButton(props: ButtonIconProps) {
   let { children, defaultstyle, disabledstyle, size } = props
 
   if (size === 'medium') {
@@ -86,7 +86,7 @@ export function NeutralButton(props: ButtonProps) {
 
   return (
     <button
-      className={`${disabledstyle} ${defaultstyle} rounded-lg border-[#767676] bg-[#E3E3E3] hover:bg-[#CDCDCD]`}
+      className={`${disabledstyle} ${defaultstyle} rounded-full border-[#767676] bg-[#E3E3E3] hover:bg-[#CDCDCD]`}
       {...props}
     >
       <span className="text-black">{children}</span>
@@ -94,7 +94,7 @@ export function NeutralButton(props: ButtonProps) {
   )
 }
 
-export function GhostButton(props: ButtonProps) {
+export function GhostButton(props: ButtonIconProps) {
   let { children, defaultstyle, disabledstyle, size } = props
 
   if (size === 'medium') {
@@ -105,7 +105,7 @@ export function GhostButton(props: ButtonProps) {
 
   return (
     <button
-      className={`${disabledstyle} ${defaultstyle} rounded-lg bg-[#FFFFFF] hover:border-[#B3B3B3]`}
+      className={`${disabledstyle} ${defaultstyle} rounded-full bg-[#FFFFFF] hover:border-[#B3B3B3]`}
       {...props}
     >
       <span className="text-black">{children}</span>

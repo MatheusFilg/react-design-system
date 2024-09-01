@@ -2,8 +2,8 @@ import { ButtonHTMLAttributes, ReactNode } from 'react'
 
 interface ButtonDangerProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode
-  disabledStyle?: string
-  defaultStyle?: string
+  disabledstyle?: string
+  defaultstyle?: string
   variant?: 'primary' | 'ghost'
   size?: 'small' | 'medium'
 }
@@ -20,8 +20,8 @@ export default function ButtonDanger(props: ButtonDangerProps) {
     case 'primary':
       return (
         <DefaultButton
-          disabledStyle={disable}
-          defaultStyle={style}
+          disabledstyle={disable}
+          defaultstyle={style}
           {...props}
           size={props?.size ?? 'medium'}
         />
@@ -29,8 +29,8 @@ export default function ButtonDanger(props: ButtonDangerProps) {
     case 'ghost':
       return (
         <GhostButton
-          disabledStyle={disable}
-          defaultStyle={style}
+          disabledstyle={disable}
+          defaultstyle={style}
           {...props}
           size={props?.size ?? 'medium'}
         />
@@ -38,8 +38,8 @@ export default function ButtonDanger(props: ButtonDangerProps) {
     default:
       return (
         <DefaultButton
-          disabledStyle={disable}
-          defaultStyle={style}
+          disabledstyle={disable}
+          defaultstyle={style}
           {...props}
           size={props?.size ?? 'medium'}
         />
@@ -48,18 +48,18 @@ export default function ButtonDanger(props: ButtonDangerProps) {
 }
 
 export function DefaultButton(props: ButtonDangerProps) {
-  let { children, defaultStyle, size, disabledStyle } = props
+  let { children, defaultstyle, size, disabledstyle } = props
 
   if (size === 'medium') {
-    defaultStyle += ' w-18 h-10 p-3 text-base'
+    defaultstyle += ' w-18 h-10 p-3 text-base'
   } else {
-    defaultStyle += ' w-16 h-8 p-2 text-sm'
+    defaultstyle += ' w-16 h-8 p-2 text-sm'
   }
 
   return (
     <button
       {...props}
-      className={`${disabledStyle} ${defaultStyle} border-[#C00F0C] bg-[#EC221F] text-white hover:border-[#900B09] hover:bg-[#C00F0C]`}
+      className={`${disabledstyle} ${defaultstyle} border-[#C00F0C] bg-[#EC221F] text-white hover:border-[#900B09] hover:bg-[#C00F0C]`}
     >
       <span>{children}</span>
     </button>
@@ -67,18 +67,18 @@ export function DefaultButton(props: ButtonDangerProps) {
 }
 
 export function GhostButton(props: ButtonDangerProps) {
-  let { children, defaultStyle, size, disabledStyle } = props
+  let { children, defaultstyle, size, disabledstyle } = props
 
   if (size === 'medium') {
-    defaultStyle += ' w-18 h-10 p-3 text-base'
+    defaultstyle += ' w-18 h-10 p-3 text-base'
   } else {
-    defaultStyle += ' w-16 h-8 p-2 text-sm'
+    defaultstyle += ' w-16 h-8 p-2 text-sm'
   }
 
   return (
     <button
       {...props}
-      className={`${disabledStyle} ${defaultStyle} border-transparent text-[#900B09] hover:border hover:border-[#900B09] hover:bg-[#FDD3D0]`}
+      className={`${disabledstyle} ${defaultstyle} border-transparent text-[#900B09] hover:border hover:border-[#900B09] hover:bg-[#FDD3D0]`}
     >
       <span>{children}</span>
     </button>
