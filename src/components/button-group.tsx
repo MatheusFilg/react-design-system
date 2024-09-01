@@ -3,7 +3,7 @@ import Label from './ui/label'
 
 export default function ButtonGroup() {
   return (
-    <div className="flex flex-col gap-10 p-8">
+    <div className="flex flex-col gap-10">
       {/* Medium Buttons */}
       <div className="flex flex-row gap-10">
         <Label variant="group">Medium</Label>
@@ -80,7 +80,7 @@ export default function ButtonGroup() {
 
       <div className="flex flex-row items-center align-middle">
         <div className="w-52" />
-        <div className="flex -translate-y-10 translate-x-14 flex-row gap-8">
+        <div className="flex -translate-y-10 translate-x-12 flex-row gap-4">
           <div className="flex items-center">
             <Label variant="vertical">Default</Label>
           </div>

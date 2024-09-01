@@ -1,6 +1,6 @@
-import { ReactNode } from 'react'
+import { LabelHTMLAttributes, ReactNode } from 'react'
 
-interface LabelProps {
+interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement> {
   children: ReactNode
   variant?: 'horizontal' | 'vertical' | 'group'
   defaultStyle?: string
@@ -10,7 +10,7 @@ export default function Label(props: LabelProps) {
   const { variant } = props
 
   const style =
-    'w-fit items-center justify-center border border-[#B2B2B2] font-roboto font-normal'
+    'w-fit items-center justify-center border border-[#B2B2B2] font-roboto font-normal '
 
   switch (variant) {
     case 'horizontal':

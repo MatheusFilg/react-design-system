@@ -10,7 +10,7 @@ interface ButtonDangerProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export default function ButtonDanger(props: ButtonDangerProps) {
   const style =
-    'flex items-center border gap-4 rounded-lg font-inter font-normal items-center justify-center'
+    'flex items-center border gap-4 rounded-lg font-inter font-normal items-center justify-center '
   const disable =
     ' disabled:border-[#B3B3B3] disabled:bg-[#D9D9D9] disabled:text-[#B3B3B3]'
 
