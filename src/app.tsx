@@ -4,7 +4,7 @@ import ButtonIconGroup from './components/button-icon-group'
 
 export default function App() {
   return (
-    <div className="flex h-screen w-screen flex-row justify-between p-8">
+    <div className="flex h-screen w-screen flex-row gap-16 p-8">
       <ButtonGroup />
       <ButtonDangerGroup />
       <ButtonIconGroup />

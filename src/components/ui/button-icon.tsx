@@ -12,7 +12,7 @@ export default function ButtonIcon(props: ButtonIconProps) {
   const { variant } = props
 
   const style =
-    'flex items-center border gap-4 font-inter font-normal items-center justify-center '
+    'flex items-center border gap-2 font-inter font-normal items-center justify-center '
   const disable =
     ' disabled:border-[#B3B3B3] disabled:bg-[#D9D9D9] disabled:text-[#B3B3B3]'
 
@@ -60,15 +60,15 @@ export function DefaultButton(props: ButtonIconProps) {
   let { children, defaultstyle, disabledstyle, size } = props
 
   if (size === 'medium') {
-    defaultstyle += ' w-18 h-10 p-3 text-base'
+    defaultstyle += ' w-11 h-11 p-3'
   } else {
-    defaultstyle += ' w-16 h-8 p-2 text-sm'
+    defaultstyle += ' w-9 h-9 p-2'
   }
 
   return (
     <button
       {...props}
-      className={`${disabledstyle} ${defaultstyle} rounded-full border-[#2C2C2C] bg-[#2C2C2C] text-white hover:bg-[#1E1E1E]`}
+      className={`${disabledstyle} ${defaultstyle} rounded-full border-[#2C2C2C] bg-[#2C2C2C] hover:bg-[#1E1E1E]`}
     >
       <span>{children}</span>
     </button>
@@ -79,17 +79,17 @@ export function NeutralButton(props: ButtonIconProps) {
   let { children, defaultstyle, disabledstyle, size } = props
 
   if (size === 'medium') {
-    defaultstyle += ' w-18 h-10 p-3 text-base'
+    defaultstyle += ' w-11 h-11 p-3'
   } else {
-    defaultstyle += ' w-16 h-8 p-2 text-sm'
+    defaultstyle += ' w-9 h-9 p-2'
   }
 
   return (
     <button
-      className={`${disabledstyle} ${defaultstyle} rounded-full border-[#767676] bg-[#E3E3E3] hover:bg-[#CDCDCD]`}
+      className={`${disabledstyle} ${defaultstyle} rounded-full border-[#D9D9D9] bg-[#F5F5F5] hover:bg-[#E6E6E6]`}
       {...props}
     >
-      <span className="text-black">{children}</span>
+      <span>{children}</span>
     </button>
   )
 }
@@ -98,17 +98,17 @@ export function GhostButton(props: ButtonIconProps) {
   let { children, defaultstyle, disabledstyle, size } = props
 
   if (size === 'medium') {
-    defaultstyle += ' w-18 h-10 p-3 text-base'
+    defaultstyle += ' w-11 h-11 p-3'
   } else {
-    defaultstyle += ' w-16 h-8 p-2 text-sm'
+    defaultstyle += ' w-9 h-9 p-2'
   }
 
   return (
     <button
-      className={`${disabledstyle} ${defaultstyle} rounded-full bg-[#FFFFFF] hover:border-[#B3B3B3]`}
+      className={`${disabledstyle} ${defaultstyle} rounded-full border-transparent hover:bg-[#F5F5F5]`}
       {...props}
     >
-      <span className="text-black">{children}</span>
+      <span>{children}</span>
     </button>
   )
 }
