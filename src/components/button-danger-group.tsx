@@ -5,7 +5,7 @@ export default function ButtonDangerGroup() {
   return (
     <div className="flex flex-col gap-10">
       {/* Medium Buttons */}
-      <div className="flex flex-row gap-10">
+      <div className="flex flex-row items-center gap-10">
         <Label variant="group">Medium</Label>
 
         <div className="flex flex-col gap-10">
