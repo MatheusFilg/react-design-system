@@ -1,30 +1,29 @@
-# React + TypeScript + Vite
+# Design System - Figma (Em construção)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![GitHub repo size](https://img.shields.io/github/repo-size/MatheusFilg/react-design-system)
+![GitHub language count](https://img.shields.io/github/languages/count/MatheusFilg/react-design-system)
+![GitHub forks](https://img.shields.io/github/forks/MatheusFilg/react-design-system)
+![Bitbucket open issues](https://img.shields.io/bitbucket/issues/MatheusFilg/react-design-system)
+![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/MatheusFilg/react-design-system)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> Projeto dedicado a criar um design system inspirado no [design system do figma](https://www.figma.com/design/Gtc4crAVaIctbmdg4e076z/Simple-Design-System-(Community)?node-id=3-5&node-type=CANVAS)
 
-## Expanding the ESLint configuration
+### Ajustes e melhorias
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+O projeto foi desenvolvido mas poderia melhorar em alguns pontos:
 
-- Configure the top-level `parserOptions` property like this:
+- [ ] Maior reutilização dos componentes que foram desenvolvidos;
+- [ ] Adição de mais componentes (Em andamento);
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## 📫 Contribuindo para o Design System:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Para contribuir com o Design System, siga estas etapas:
+
+1. Fork este repositório.
+2. Crie um branch: `git checkout -b <nome_branch>`.
+3. Faça suas alterações e confirme-as: `git commit -m '<mensagem_commit>'`
+4. Envie para o branch original: `git push origin <nome_do_projeto> / <local>`
+5. Crie a solicitação de pull.
+
+Como alternativa, consulte a documentação do GitHub em [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
