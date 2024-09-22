@@ -1,11 +1,13 @@
+import { RouterProvider } from 'react-router-dom'
+
 import { Header } from './components/header'
-import { ButtonPage } from './pages/button-page'
+import { router } from './routes'
 
 export default function App() {
   return (
     <div>
       <Header />
-      <ButtonPage />
+      <RouterProvider router={router} />
     </div>
   )
 }

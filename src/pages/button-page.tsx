@@ -1,7 +1,7 @@
-import ButtonDangerGroup from '../components/button-danger-group'
-import ButtonGroup from '../components/button-group'
-import ButtonIconGroup from '../components/button-icon-group'
-import ButtonMultipleGroup from '../components/button-multiple-group'
+import ButtonDangerGroup from '../components/buttons/button-danger-group'
+import ButtonGroup from '../components/buttons/button-group'
+import ButtonIconGroup from '../components/buttons/button-icon-group'
+import ButtonMultipleGroup from '../components/buttons/button-multiple-group'
 
 export function ButtonPage() {
   return (

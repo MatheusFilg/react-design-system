@@ -1,5 +1,5 @@
-import Button from './ui/button'
-import Label from './ui/label'
+import Button from '../ui/button/button'
+import Label from '../ui/label'
 
 export default function ButtonGroup() {
   return (

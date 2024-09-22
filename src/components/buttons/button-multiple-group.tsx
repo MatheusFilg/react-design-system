@@ -1,5 +1,5 @@
-import ButtonMultiple from './ui/button-multiple'
-import Label from './ui/label'
+import ButtonMultiple from '../ui/button/button-multiple'
+import Label from '../ui/label'
 
 export default function ButtonMultipleGroup() {
   return (
