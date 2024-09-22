@@ -1,5 +1,5 @@
-import ButtonDanger from '../ui/button/button-danger'
-import Label from '../ui/label'
+import ButtonDanger from '../_ui/button/button-danger'
+import Label from '../_ui/label'
 
 export default function ButtonDangerGroup() {
   return (

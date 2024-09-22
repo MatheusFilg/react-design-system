@@ -1,6 +1,6 @@
 import Star from '../../assets/icons/Star'
-import ButtonIcon from '../ui/button/button-icon'
-import Label from '../ui/label'
+import ButtonIcon from '../_ui/button/button-icon'
+import Label from '../_ui/label'
 
 export default function ButtonIconGroup() {
   return (
