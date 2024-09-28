@@ -1,6 +1,6 @@
 import { AnchorHTMLAttributes, ReactNode } from 'react'
 
-import Star from '../../../assets/icons/Star'
+import Tag from '../../../assets/icons/Tag'
 
 interface NavigationProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   children: ReactNode
@@ -12,30 +12,68 @@ interface NavigationProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
 
 export default function Navigation(props: NavigationProps) {
   const { direction } = props
-
-  const style = 'font-inter text-sm font-semibold'
+  const style =
+    'group flex items-center gap-2 text-[#757575] active:text-[#2C2C2C] '
 
   switch (direction) {
     case 'row':
-      return <DefaultNavigation defaultstyle={style} {...props} />
+      return (
+        <RowNavigation
+          defaultstyle={style}
+          {...props}
+          size={props?.size ?? 'small'}
+        />
+      )
 
     case 'column':
-      return <DefaultNavigation defaultstyle={style} {...props} />
+      return (
+        <ColumnNavigation
+          defaultstyle={style}
+          {...props}
+          size={props?.size ?? 'small'}
+        />
+      )
     default:
-      return <DefaultNavigation defaultstyle={style} {...props} />
+      return (
+        <RowNavigation
+          defaultstyle={style}
+          {...props}
+          size={props?.size ?? 'small'}
+        />
+      )
   }
 }
 
-export function DefaultNavigation(props: NavigationProps) {
-  const { children, href, defaultstyle } = props
+export function RowNavigation(props: NavigationProps) {
+  let { children, href, defaultstyle, size } = props
+
+  if (size === 'small') {
+    defaultstyle += 'text-sm'
+  } else {
+    defaultstyle += 'text-base'
+  }
 
   return (
-    <a
-      className="flex flex-col items-center gap-2 text-[#757575] active:text-[#2C2C2C]"
-      href={href}
-    >
-      <Star color="#2C2C2C" />
-      <p className={`${defaultstyle} `}>{children}</p>
+    <a className={`${defaultstyle} flex-row`} href={href}>
+      <Tag className="group-active:stroke-[#2C2C2C]" />
+      <p className="font-inter font-semibold">{children}</p>
+    </a>
+  )
+}
+
+export function ColumnNavigation(props: NavigationProps) {
+  let { children, href, defaultstyle, size } = props
+
+  if (size === 'small') {
+    defaultstyle += 'text-sm'
+  } else {
+    defaultstyle += 'text-base'
+  }
+
+  return (
+    <a className={`${defaultstyle} flex-col`} href={href}>
+      <Tag className="group-active:stroke-[#2C2C2C]" />
+      <p className="font-inter font-semibold">{children}</p>
     </a>
   )
 }
