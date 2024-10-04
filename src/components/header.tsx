@@ -8,6 +8,10 @@ export function Header() {
       <a href="/navigation" className="hover:underline">
         Navigation Page
       </a>
+
+      <a href="/avatar" className="hover:underline">
+        Avatar Page
+      </a>
     </div>
   )
 }
