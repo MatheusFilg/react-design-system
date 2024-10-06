@@ -1,9 +1,8 @@
 import { AnchorHTMLAttributes, ReactNode } from 'react'
 
-import Tag from '../../../assets/icons/Tag'
-
 interface NavigationProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   children: ReactNode
+  icon?: ReactNode
   href: string
   defaultstyle?: string
   size?: 'small' | 'medium'
@@ -45,7 +44,7 @@ export default function Navigation(props: NavigationProps) {
 }
 
 export function RowNavigation(props: NavigationProps) {
-  let { children, href, defaultstyle, size } = props
+  let { children, href, defaultstyle, size, icon } = props
 
   if (size === 'small') {
     defaultstyle += 'text-sm'
@@ -55,14 +54,14 @@ export function RowNavigation(props: NavigationProps) {
 
   return (
     <a className={`${defaultstyle} flex-row`} href={href}>
-      <Tag className="group-active:stroke-[#2C2C2C]" />
+      <div>{icon}</div>
       <p className="font-inter font-semibold">{children}</p>
     </a>
   )
 }
 
 export function ColumnNavigation(props: NavigationProps) {
-  let { children, href, defaultstyle, size } = props
+  let { children, href, defaultstyle, size, icon } = props
 
   if (size === 'small') {
     defaultstyle += 'text-sm'
@@ -72,7 +71,7 @@ export function ColumnNavigation(props: NavigationProps) {
 
   return (
     <a className={`${defaultstyle} flex-col`} href={href}>
-      <Tag className="group-active:stroke-[#2C2C2C]" />
+      <div>{icon}</div>
       <p className="font-inter font-semibold">{children}</p>
     </a>
   )

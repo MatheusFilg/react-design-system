@@ -1,3 +1,4 @@
+import Tag from '../../assets/icons/Tag'
 import Label from '../_ui/label'
 import Navigation from '../_ui/navigation/navigation'
 
@@ -12,7 +13,11 @@ export default function NavigationButtonGroup() {
           <div className="flex flex-row items-center gap-6 align-middle">
             <Label>Row</Label>
             <div className="flex gap-10">
-              <Navigation href="a" size="medium">
+              <Navigation
+                href="a"
+                size="medium"
+                icon={<Tag className="group-active:stroke-[#2C2C2C]" />}
+              >
                 Label
               </Navigation>
             </div>
@@ -21,7 +26,12 @@ export default function NavigationButtonGroup() {
           <div className="flex flex-row items-center align-middle">
             <Label>Column</Label>
             <div className="flex translate-x-10 flex-row gap-10">
-              <Navigation href="a" direction="column" size="medium">
+              <Navigation
+                href="a"
+                direction="column"
+                size="medium"
+                icon={<Tag className="group-active:stroke-[#2C2C2C]" />}
+              >
                 Label
               </Navigation>
             </div>
@@ -36,14 +46,23 @@ export default function NavigationButtonGroup() {
           <div className="flex flex-row items-center gap-6 align-middle">
             <Label>Row</Label>
             <div className="flex flex-row gap-10">
-              <Navigation href="a">Label</Navigation>
+              <Navigation
+                href="a"
+                icon={<Tag className="group-active:stroke-[#2C2C2C]" />}
+              >
+                Label
+              </Navigation>
             </div>
           </div>
 
           <div className="flex flex-row items-center align-middle">
             <Label>Column</Label>
             <div className="flex translate-x-10 flex-row gap-10">
-              <Navigation href="a" direction="column">
+              <Navigation
+                href="a"
+                direction="column"
+                icon={<Tag className="group-active:stroke-[#2C2C2C]" />}
+              >
                 Label
               </Navigation>
             </div>
