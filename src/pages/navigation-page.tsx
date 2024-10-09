@@ -3,7 +3,7 @@ import NavigationListGroup from '../components/navigation-group/navigation-list-
 
 export default function NavigationPage() {
   return (
-    <div className="flex h-screen w-screen flex-row gap-72">
+    <div className="flex h-screen w-screen flex-row gap-72 p-6">
       <NavigationButtonGroup />
       <NavigationListGroup />
     </div>

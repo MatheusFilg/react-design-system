@@ -16,6 +16,7 @@ export default function AvatarGroup() {
                 src="https://github.com/MatheusFilg.png"
                 size="large"
                 format="circle"
+                type="image"
               />
               <Avatar size="large" format="circle" />
             </div>
@@ -28,6 +29,7 @@ export default function AvatarGroup() {
                 src="https://github.com/MatheusFilg.png"
                 size="large"
                 format="square"
+                type="image"
               />
               <Avatar size="large" format="square" />
             </div>
@@ -47,6 +49,7 @@ export default function AvatarGroup() {
                 src="https://github.com/MatheusFilg.png"
                 size="medium"
                 format="circle"
+                type="image"
               />
               <Avatar size="medium" format="circle" />
             </div>
@@ -59,6 +62,7 @@ export default function AvatarGroup() {
                 src="https://github.com/MatheusFilg.png"
                 size="medium"
                 format="square"
+                type="image"
               />
               <Avatar size="medium" format="square" />
             </div>
@@ -78,6 +82,7 @@ export default function AvatarGroup() {
                 src="https://github.com/MatheusFilg.png"
                 size="small"
                 format="circle"
+                type="image"
               />
               <Avatar size="small" format="circle" />
             </div>
@@ -90,6 +95,7 @@ export default function AvatarGroup() {
                 src="https://github.com/MatheusFilg.png"
                 size="small"
                 format="square"
+                type="image"
               />
               <Avatar size="small" format="square" />
             </div>
