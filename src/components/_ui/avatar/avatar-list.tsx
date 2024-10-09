@@ -6,44 +6,80 @@ interface AvatarListProps {
 
 export default function AvatarList(props: AvatarListProps) {
   const { gap } = props
-  let variantStyle = ''
 
-  if (gap === 'spaced') {
-    variantStyle += 'gap-1 '
-  }
-  if (gap === 'overlap') {
-    variantStyle += 'absolute top-0 '
-  }
+  switch (gap) {
+    case 'spaced':
+      return <SpacedAvatarList />
 
+    case 'overlap':
+      return <OverlapAvatarList />
+
+    default:
+      return <SpacedAvatarList />
+  }
+}
+
+export function SpacedAvatarList() {
   return (
-    <div className="relative flex w-[200px]">
+    <div className="flex flex-row">
       <Avatar
         src="https://github.com/MatheusFilg.png"
-        format="circle"
         size="large"
+        format="circle"
         type="image"
-        defaultstyle={`${variantStyle}`}
       />
       <Avatar
         src="https://github.com/MatheusFilg.png"
-        format="circle"
         size="large"
+        format="circle"
         type="image"
-        defaultstyle={`${variantStyle}`}
       />
       <Avatar
         src="https://github.com/MatheusFilg.png"
-        format="circle"
         size="large"
+        format="circle"
         type="image"
-        defaultstyle={`${variantStyle}`}
       />
       <Avatar
         src="https://github.com/MatheusFilg.png"
-        format="circle"
         size="large"
+        format="circle"
         type="image"
-        defaultstyle={`${variantStyle}`}
+      />
+    </div>
+  )
+}
+
+export function OverlapAvatarList() {
+  return (
+    <div className="relative flex flex-row">
+      <Avatar
+        src="https://github.com/MatheusFilg.png"
+        size="large"
+        format="circle"
+        type="image"
+        defaultstyle="shadow-md shadow-[#0C0C0D80]"
+      />
+      <Avatar
+        src="https://github.com/MatheusFilg.png"
+        size="large"
+        format="circle"
+        type="image"
+        defaultstyle="-translate-x-2 shadow-md shadow-[#0C0C0D80]"
+      />
+      <Avatar
+        src="https://github.com/MatheusFilg.png"
+        size="large"
+        format="circle"
+        type="image"
+        defaultstyle="-translate-x-4 shadow-md shadow-[#0C0C0D80]"
+      />
+      <Avatar
+        src="https://github.com/MatheusFilg.png"
+        size="large"
+        format="circle"
+        type="image"
+        defaultstyle="-translate-x-6 shadow-md shadow-[#0C0C0D80]"
       />
     </div>
   )

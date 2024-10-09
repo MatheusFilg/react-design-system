@@ -49,25 +49,25 @@ export function ImageAvatar(props: AvatarProps) {
   let { src, size, format, defaultstyle } = props
 
   if (size === 'large') {
-    defaultstyle += 'h-10 w-10 text-base '
+    defaultstyle += ' h-10 w-10 text-base'
   }
   if (size === 'medium') {
-    defaultstyle += 'h-8 w-8 text-sm '
+    defaultstyle += ' h-8 w-8 text-sm'
   }
   if (size === 'small') {
-    defaultstyle += 'h-6 w-6 text-sm '
+    defaultstyle += ' h-6 w-6 text-sm'
   }
 
   if (format === 'square') {
-    defaultstyle += 'rounded-lg '
+    defaultstyle += ' rounded-lg '
   }
   if (format === 'circle') {
-    defaultstyle += 'rounded-full '
+    defaultstyle += ' rounded-full '
   }
 
   return (
     <div>
-      <img src={src} alt="" className={`${defaultstyle} `} />
+      <img src={src} alt="" className={`${defaultstyle}`} />
     </div>
   )
 }
@@ -76,20 +76,20 @@ export function InitialAvatar(props: AvatarProps) {
   let { size, format, defaultstyle } = props
 
   if (size === 'large') {
-    defaultstyle += 'h-10 w-10 text-base '
+    defaultstyle += ' h-10 w-10 text-base'
   }
   if (size === 'medium') {
-    defaultstyle += 'h-8 w-8 text-sm '
+    defaultstyle += ' h-8 w-8 text-sm'
   }
   if (size === 'small') {
-    defaultstyle += 'h-6 w-6 text-sm '
+    defaultstyle += ' h-6 w-6 text-sm'
   }
 
   if (format === 'square') {
-    defaultstyle += 'rounded-lg '
+    defaultstyle += ' rounded-lg'
   }
   if (format === 'circle') {
-    defaultstyle += 'rounded-full '
+    defaultstyle += ' rounded-full'
   }
 
   return (
