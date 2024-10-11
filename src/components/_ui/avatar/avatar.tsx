@@ -1,6 +1,6 @@
 import { AnchorHTMLAttributes } from 'react'
 
-interface AvatarProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+export interface AvatarProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   src?: string
   defaultstyle?: string
   size?: 'small' | 'medium' | 'large'

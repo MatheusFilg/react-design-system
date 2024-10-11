@@ -4,9 +4,9 @@ import Label from '../_ui/label'
 export default function AvatarListGroup() {
   return (
     <div className="flex flex-col gap-10">
-      {/* Large AvatarList */}
+      {/* AvatarList */}
       <div className="flex translate-x-2 flex-row items-center gap-10">
-        <Label variant="group">Large</Label>
+        <Label variant="group">Group</Label>
 
         <div className="flex flex-col gap-10">
           <div className="flex flex-row items-center gap-6 align-middle">
