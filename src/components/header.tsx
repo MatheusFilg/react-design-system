@@ -14,7 +14,11 @@ export function Header() {
       </a>
 
       <a href="/tag" className="hover:underline">
-        Tags
+        Tag
+      </a>
+
+      <a href="/card" className="hover:underline">
+        Card
       </a>
     </div>
   )

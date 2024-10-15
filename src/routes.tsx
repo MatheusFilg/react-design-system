@@ -1,7 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom'
 
 import AvatarPage from './pages/avatar-page'
-import { ButtonPage } from './pages/button-page'
+import ButtonPage from './pages/button-page'
+import CardPage from './pages/card-page'
 import NavigationPage from './pages/navigation-page'
 import TagPage from './pages/tag-page'
 
@@ -24,5 +25,10 @@ export const router = createBrowserRouter([
   {
     path: '/',
     children: [{ path: '/tag', element: <TagPage /> }],
+  },
+
+  {
+    path: '/',
+    children: [{ path: '/card', element: <CardPage /> }],
   },
 ])
