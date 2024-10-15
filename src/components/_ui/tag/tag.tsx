@@ -1,6 +1,6 @@
 import { HTMLAttributes, ReactNode } from 'react'
 
-interface TagProps extends HTMLAttributes<HTMLDivElement> {
+export interface TagProps extends HTMLAttributes<HTMLDivElement> {
   children: string
   icon?: ReactNode
   defaultstyle?: string
