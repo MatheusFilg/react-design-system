@@ -1,6 +1,7 @@
 import { AnchorHTMLAttributes, ReactNode } from 'react'
 
-interface NavigationProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+export interface NavigationProps
+  extends AnchorHTMLAttributes<HTMLAnchorElement> {
   children: ReactNode
   icon?: ReactNode
   href: string
