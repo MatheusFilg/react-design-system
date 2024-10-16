@@ -5,44 +5,100 @@ import Button from '../button/button'
 interface CardProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode
   defaultstyle?: string
-  media?: ReactNode
+  media: string | ReactNode
   direction?: 'row' | 'column'
-  variant?: 'stroke' | ' default'
+  variant?: 'stroke' | 'default'
 }
+
+const style =
+  'flex h-fit w-[440px] items-start gap-6 rounded-lg border-[#D9D9D9] p-6'
 
 export default function Card(props: CardProps) {
   const { direction } = props
 
   switch (direction) {
     case 'row':
-      return <HorizontalCard {...props} />
+      return (
+        <HorizontalCard
+          defaultstyle={style}
+          {...props}
+          variant={props.variant ?? 'default'}
+        />
+      )
 
     case 'column':
-      return <VerticalCard {...props} />
+      return (
+        <VerticalCard
+          defaultstyle={style}
+          {...props}
+          variant={props.variant ?? 'default'}
+        />
+      )
     default:
-      return <HorizontalCard {...props} />
+      return (
+        <HorizontalCard
+          defaultstyle={style}
+          {...props}
+          variant={props.variant ?? 'default'}
+        />
+      )
   }
 }
 
 export function HorizontalCard(props: CardProps) {
-  const { children, media } = props
+  let { children, media, defaultstyle, variant } = props
+
+  if (variant === 'default') {
+    defaultstyle += ' bg-transparent'
+  }
+  if (variant === 'stroke') {
+    defaultstyle += ' bg-white'
+  }
 
   return (
-    <div className="flex flex-row items-start gap-6">
-      {media}
-      <div className="flex flex-col gap-4">
+    <div className={`${defaultstyle} flex-row`}>
+      <div className="w-auto">
+        {typeof media === 'string' ? (
+          <img alt="" src={media} className="max-w-[160px]" />
+        ) : (
+          media
+        )}
+      </div>
+      <div className="flex w-full flex-col gap-4 text-base">
         {children}
-        <Button>Button</Button>
+        <Button variant="neutral" size="medium">
+          Button
+        </Button>
       </div>
     </div>
   )
 }
 
 export function VerticalCard(props: CardProps) {
-  const { children } = props
+  let { children, media, defaultstyle, variant } = props
+
+  if (variant === 'default') {
+    defaultstyle += ' bg-transparent'
+  }
+  if (variant === 'stroke') {
+    defaultstyle += ' bg-white'
+  }
+
   return (
-    <div>
-      <span>{children}</span>
+    <div className={`${defaultstyle} flex-col`}>
+      <div className="w-auto">
+        {typeof media === 'string' ? (
+          <img alt="" src={media} className="max-w-[160px]" />
+        ) : (
+          media
+        )}
+      </div>
+      <div className="flex w-full flex-col gap-4 text-base">
+        {children}
+        <Button variant="neutral" size="medium">
+          Button
+        </Button>
+      </div>
     </div>
   )
 }

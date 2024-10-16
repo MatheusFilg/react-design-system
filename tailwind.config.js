@@ -7,6 +7,9 @@ export default {
         roboto: ['Roboto Mono', 'monospace'],
         inter: ['Inter', 'sans-serif'],
       },
+      width: {
+        18: '4.5rem',
+      },
     },
   },
   plugins: [],

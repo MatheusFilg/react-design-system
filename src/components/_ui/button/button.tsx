@@ -60,9 +60,9 @@ export function DefaultButton(props: ButtonProps) {
   let { children, defaultstyle, disabledstyle, size } = props
 
   if (size === 'medium') {
-    defaultstyle += ' w-18 h-10 p-3 text-base'
+    defaultstyle += 'w-18 h-10 p-3 text-base'
   } else {
-    defaultstyle += ' w-16 h-8 p-2 text-sm'
+    defaultstyle += 'w-16 h-8 p-2 text-sm'
   }
 
   return (
@@ -79,9 +79,9 @@ export function NeutralButton(props: ButtonProps) {
   let { children, defaultstyle, disabledstyle, size } = props
 
   if (size === 'medium') {
-    defaultstyle += ' w-18 h-10 p-3 text-base'
+    defaultstyle += 'w-18 h-10 p-3 text-base'
   } else {
-    defaultstyle += ' w-16 h-8 p-2 text-sm'
+    defaultstyle += 'w-16 h-8 p-2 text-sm'
   }
 
   return (
@@ -98,9 +98,9 @@ export function GhostButton(props: ButtonProps) {
   let { children, defaultstyle, disabledstyle, size } = props
 
   if (size === 'medium') {
-    defaultstyle += ' w-18 h-10 p-3 text-base'
+    defaultstyle += 'w-18 h-10 p-3 text-base'
   } else {
-    defaultstyle += ' w-16 h-8 p-2 text-sm'
+    defaultstyle += 'w-16 h-8 p-2 text-sm'
   }
 
   return (
