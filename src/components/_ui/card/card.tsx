@@ -3,8 +3,8 @@ import { HTMLAttributes, ReactNode } from 'react'
 import Button from '../button/button'
 
 interface CardProps extends HTMLAttributes<HTMLDivElement> {
-  children: ReactNode
   defaultstyle?: string
+  children: ReactNode
   media: string | ReactNode
   direction?: 'row' | 'column'
   variant?: 'stroke' | 'default'
