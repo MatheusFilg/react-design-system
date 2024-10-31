@@ -5,6 +5,7 @@ import ButtonPage from './pages/button-page'
 import CardPage from './pages/card-page'
 import NavigationPage from './pages/navigation-page'
 import TagPage from './pages/tag-page'
+import TooltipPage from './pages/tooltip-page'
 
 export const router = createBrowserRouter([
   {
@@ -30,5 +31,10 @@ export const router = createBrowserRouter([
   {
     path: '/',
     children: [{ path: '/card', element: <CardPage /> }],
+  },
+
+  {
+    path: '/',
+    children: [{ path: '/tooltip', element: <TooltipPage /> }],
   },
 ])

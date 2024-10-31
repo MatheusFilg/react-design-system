@@ -20,6 +20,10 @@ export function Header() {
       <a href="/card" className="hover:underline">
         Card
       </a>
+
+      <a href="/tooltip" className="hover:underline">
+        Tooltip
+      </a>
     </div>
   )
 }
