@@ -3,7 +3,7 @@ import { ButtonHTMLAttributes, ReactNode } from 'react'
 interface ButtonIconProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode
   disabledstyle?: string
-  defaultstyle?: string
+  className?: string
   size?: 'small' | 'medium'
   variant?: 'primary' | 'neutral' | 'ghost'
 }
@@ -21,7 +21,7 @@ export default function ButtonIcon(props: ButtonIconProps) {
       return (
         <DefaultButton
           disabledstyle={disable}
-          defaultstyle={style}
+          className={style}
           {...props}
           size={props?.size ?? 'medium'}
         />
@@ -30,7 +30,7 @@ export default function ButtonIcon(props: ButtonIconProps) {
       return (
         <NeutralButton
           disabledstyle={disable}
-          defaultstyle={style}
+          className={style}
           {...props}
           size={props?.size ?? 'medium'}
         />
@@ -39,7 +39,7 @@ export default function ButtonIcon(props: ButtonIconProps) {
       return (
         <GhostButton
           disabledstyle={disable}
-          defaultstyle={style}
+          className={style}
           {...props}
           size={props?.size ?? 'medium'}
         />
@@ -48,7 +48,7 @@ export default function ButtonIcon(props: ButtonIconProps) {
       return (
         <DefaultButton
           disabledstyle={disable}
-          defaultstyle={style}
+          className={style}
           {...props}
           size={props?.size ?? 'medium'}
         />
@@ -57,18 +57,18 @@ export default function ButtonIcon(props: ButtonIconProps) {
 }
 
 export function DefaultButton(props: ButtonIconProps) {
-  let { children, defaultstyle, disabledstyle, size } = props
+  let { children, className, disabledstyle, size } = props
 
   if (size === 'medium') {
-    defaultstyle += ' w-11 h-11 p-3'
+    className += ' w-11 h-11 p-3'
   } else {
-    defaultstyle += ' w-9 h-9 p-2'
+    className += ' w-9 h-9 p-2'
   }
 
   return (
     <button
       {...props}
-      className={`${disabledstyle} ${defaultstyle} rounded-full border-[#2C2C2C] bg-[#2C2C2C] hover:bg-[#1E1E1E]`}
+      className={`${disabledstyle} ${className} rounded-full border-[#2C2C2C] bg-[#2C2C2C] hover:bg-[#1E1E1E]`}
     >
       <span>{children}</span>
     </button>
@@ -76,17 +76,17 @@ export function DefaultButton(props: ButtonIconProps) {
 }
 
 export function NeutralButton(props: ButtonIconProps) {
-  let { children, defaultstyle, disabledstyle, size } = props
+  let { children, className, disabledstyle, size } = props
 
   if (size === 'medium') {
-    defaultstyle += ' w-11 h-11 p-3'
+    className += ' w-11 h-11 p-3'
   } else {
-    defaultstyle += ' w-9 h-9 p-2'
+    className += ' w-9 h-9 p-2'
   }
 
   return (
     <button
-      className={`${disabledstyle} ${defaultstyle} rounded-full border-[#D9D9D9] bg-[#F5F5F5] hover:bg-[#E6E6E6]`}
+      className={`${disabledstyle} ${className} rounded-full border-[#D9D9D9] bg-[#F5F5F5] hover:bg-[#E6E6E6]`}
       {...props}
     >
       <span>{children}</span>
@@ -95,17 +95,17 @@ export function NeutralButton(props: ButtonIconProps) {
 }
 
 export function GhostButton(props: ButtonIconProps) {
-  let { children, defaultstyle, disabledstyle, size } = props
+  let { children, className, disabledstyle, size } = props
 
   if (size === 'medium') {
-    defaultstyle += ' w-11 h-11 p-3'
+    className += ' w-11 h-11 p-3'
   } else {
-    defaultstyle += ' w-9 h-9 p-2'
+    className += ' w-9 h-9 p-2'
   }
 
   return (
     <button
-      className={`${disabledstyle} ${defaultstyle} rounded-full border-transparent hover:bg-[#F5F5F5]`}
+      className={`${disabledstyle} ${className} rounded-full border-transparent hover:bg-[#F5F5F5]`}
       {...props}
     >
       <span>{children}</span>

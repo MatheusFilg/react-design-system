@@ -3,7 +3,7 @@ import { HTMLAttributes, ReactNode } from 'react'
 interface CardStatsProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode
   direction?: 'row' | 'column'
-  defaultstyle?: string
+  className?: string
 }
 
 export default function CardStats(props: CardStatsProps) {
@@ -14,21 +14,21 @@ export default function CardStats(props: CardStatsProps) {
 
   switch (direction) {
     case 'row':
-      return <HorizontalCardStats defaultstyle={style} {...props} />
+      return <HorizontalCardStats className={style} {...props} />
 
     case 'column':
-      return <VerticalCardStats defaultstyle={style} {...props} />
+      return <VerticalCardStats className={style} {...props} />
     default:
-      return <VerticalCardStats defaultstyle={style} {...props} />
+      return <VerticalCardStats className={style} {...props} />
   }
 }
 
 export function HorizontalCardStats(props: CardStatsProps) {
-  const { children, defaultstyle } = props
-  return <div className={`${defaultstyle} flex-row`}>{children}</div>
+  const { children, className } = props
+  return <div className={`${className} flex-row`}>{children}</div>
 }
 
 export function VerticalCardStats(props: CardStatsProps) {
-  const { children, defaultstyle } = props
-  return <div className={`${defaultstyle} flex-col`}>{children}</div>
+  const { children, className } = props
+  return <div className={`${className} flex-col`}>{children}</div>
 }

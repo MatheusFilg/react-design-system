@@ -2,7 +2,7 @@ import { AnchorHTMLAttributes } from 'react'
 
 export interface AvatarProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   src?: string
-  defaultstyle?: string
+  className?: string
   size?: 'small' | 'medium' | 'large'
   format?: 'square' | 'circle'
   type?: 'image' | 'initial'
@@ -17,7 +17,7 @@ export default function Avatar(props: AvatarProps) {
     case 'image':
       return (
         <ImageAvatar
-          defaultstyle={style}
+          className={style}
           {...props}
           size={props?.size ?? 'large'}
           format={props?.format ?? 'circle'}
@@ -27,7 +27,7 @@ export default function Avatar(props: AvatarProps) {
     case 'initial':
       return (
         <InitialAvatar
-          defaultstyle={style}
+          className={style}
           {...props}
           size={props?.size ?? 'large'}
           format={props?.format ?? 'circle'}
@@ -36,7 +36,7 @@ export default function Avatar(props: AvatarProps) {
     default:
       return (
         <InitialAvatar
-          defaultstyle={style}
+          className={style}
           {...props}
           size={props?.size ?? 'large'}
           format={props?.format ?? 'circle'}
@@ -46,56 +46,56 @@ export default function Avatar(props: AvatarProps) {
 }
 
 export function ImageAvatar(props: AvatarProps) {
-  let { src, size, format, defaultstyle } = props
+  let { src, size, format, className } = props
 
   if (size === 'large') {
-    defaultstyle += ' h-10 w-10 text-base'
+    className += ' h-10 w-10 text-base'
   }
   if (size === 'medium') {
-    defaultstyle += ' h-8 w-8 text-sm'
+    className += ' h-8 w-8 text-sm'
   }
   if (size === 'small') {
-    defaultstyle += ' h-6 w-6 text-sm'
+    className += ' h-6 w-6 text-sm'
   }
 
   if (format === 'square') {
-    defaultstyle += ' rounded-lg'
+    className += ' rounded-lg'
   }
   if (format === 'circle') {
-    defaultstyle += ' rounded-full'
+    className += ' rounded-full'
   }
 
   return (
     <div>
-      <img src={src} alt="" className={`${defaultstyle}`} />
+      <img src={src} alt="" className={`${className}`} />
     </div>
   )
 }
 
 export function InitialAvatar(props: AvatarProps) {
-  let { size, format, defaultstyle } = props
+  let { size, format, className } = props
 
   if (size === 'large') {
-    defaultstyle += ' h-10 w-10 text-base'
+    className += ' h-10 w-10 text-base'
   }
   if (size === 'medium') {
-    defaultstyle += ' h-8 w-8 text-sm'
+    className += ' h-8 w-8 text-sm'
   }
   if (size === 'small') {
-    defaultstyle += ' h-6 w-6 text-sm'
+    className += ' h-6 w-6 text-sm'
   }
 
   if (format === 'square') {
-    defaultstyle += ' rounded-lg'
+    className += ' rounded-lg'
   }
   if (format === 'circle') {
-    defaultstyle += ' rounded-full'
+    className += ' rounded-full'
   }
 
   return (
     <div>
       <p
-        className={`${defaultstyle} items-center justify-center bg-black font-inter text-white`}
+        className={`${className} items-center justify-center bg-black font-inter text-white`}
       >
         M
       </p>

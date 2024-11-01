@@ -4,7 +4,7 @@ import AvatarBlock from '../avatar/avatar-block'
 
 interface CardTestimonialProps extends HTMLAttributes<HTMLDivElement> {
   description: string
-  defaultstyle?: string
+  className?: string
   direction?: 'row' | 'column'
 }
 
@@ -15,19 +15,19 @@ export default function CardTestimonial(props: CardTestimonialProps) {
 
   switch (direction) {
     case 'row':
-      return <HorizontalCardTestimonial defaultstyle={style} {...props} />
+      return <HorizontalCardTestimonial className={style} {...props} />
     case 'column':
-      return <VerticalCardTestimonial defaultstyle={style} {...props} />
+      return <VerticalCardTestimonial className={style} {...props} />
 
     default:
-      return <HorizontalCardTestimonial defaultstyle={style} {...props} />
+      return <HorizontalCardTestimonial className={style} {...props} />
   }
 }
 
 export function HorizontalCardTestimonial(props: CardTestimonialProps) {
-  const { description, defaultstyle } = props
+  const { description, className } = props
   return (
-    <div className={`${defaultstyle} flex-row items-center`}>
+    <div className={`${className} flex-row items-center`}>
       <AvatarBlock
         type="image"
         src="https://github.com/MatheusFilg.png"
@@ -40,9 +40,9 @@ export function HorizontalCardTestimonial(props: CardTestimonialProps) {
 }
 
 export function VerticalCardTestimonial(props: CardTestimonialProps) {
-  const { description, defaultstyle } = props
+  const { description, className } = props
   return (
-    <div className={`${defaultstyle} flex-col`}>
+    <div className={`${className} flex-col`}>
       <h1 className="font-inter text-2xl font-semibold">{description}</h1>
       <AvatarBlock
         type="image"

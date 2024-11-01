@@ -3,7 +3,7 @@ import { HTMLAttributes, ReactNode } from 'react'
 import Button from '../button/button'
 
 interface CardProps extends HTMLAttributes<HTMLDivElement> {
-  defaultstyle?: string
+  className?: string
   children: ReactNode
   media: string | ReactNode
   direction?: 'row' | 'column'
@@ -20,7 +20,7 @@ export default function Card(props: CardProps) {
     case 'row':
       return (
         <HorizontalCard
-          defaultstyle={style}
+          className={style}
           {...props}
           variant={props.variant ?? 'default'}
         />
@@ -29,7 +29,7 @@ export default function Card(props: CardProps) {
     case 'column':
       return (
         <VerticalCard
-          defaultstyle={style}
+          className={style}
           {...props}
           variant={props.variant ?? 'default'}
         />
@@ -37,7 +37,7 @@ export default function Card(props: CardProps) {
     default:
       return (
         <HorizontalCard
-          defaultstyle={style}
+          className={style}
           {...props}
           variant={props.variant ?? 'default'}
         />
@@ -46,17 +46,17 @@ export default function Card(props: CardProps) {
 }
 
 export function HorizontalCard(props: CardProps) {
-  let { children, media, defaultstyle, variant } = props
+  let { children, media, className, variant } = props
 
   if (variant === 'default') {
-    defaultstyle += ' bg-transparent'
+    className += ' bg-transparent'
   }
   if (variant === 'stroke') {
-    defaultstyle += ' bg-white'
+    className += ' bg-white'
   }
 
   return (
-    <div className={`${defaultstyle} flex-row`}>
+    <div className={`${className} flex-row`}>
       <div className="w-auto">
         {typeof media === 'string' ? (
           <img alt="" src={media} className="max-w-[160px]" />
@@ -75,17 +75,17 @@ export function HorizontalCard(props: CardProps) {
 }
 
 export function VerticalCard(props: CardProps) {
-  let { children, media, defaultstyle, variant } = props
+  let { children, media, className, variant } = props
 
   if (variant === 'default') {
-    defaultstyle += ' bg-transparent'
+    className += ' bg-transparent'
   }
   if (variant === 'stroke') {
-    defaultstyle += ' bg-white'
+    className += ' bg-white'
   }
 
   return (
-    <div className={`${defaultstyle} flex-col`}>
+    <div className={`${className} flex-col`}>
       <div className="w-auto">
         {typeof media === 'string' ? (
           <img alt="" src={media} className="max-w-[160px]" />

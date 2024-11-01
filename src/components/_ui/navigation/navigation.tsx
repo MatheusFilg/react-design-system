@@ -5,7 +5,7 @@ export interface NavigationProps
   children: ReactNode
   icon?: ReactNode
   href: string
-  defaultstyle?: string
+  className?: string
   size?: 'small' | 'medium'
   direction?: 'row' | 'column'
 }
@@ -19,7 +19,7 @@ export default function Navigation(props: NavigationProps) {
     case 'row':
       return (
         <RowNavigation
-          defaultstyle={style}
+          className={style}
           {...props}
           size={props?.size ?? 'small'}
         />
@@ -28,7 +28,7 @@ export default function Navigation(props: NavigationProps) {
     case 'column':
       return (
         <ColumnNavigation
-          defaultstyle={style}
+          className={style}
           {...props}
           size={props?.size ?? 'small'}
         />
@@ -36,7 +36,7 @@ export default function Navigation(props: NavigationProps) {
     default:
       return (
         <RowNavigation
-          defaultstyle={style}
+          className={style}
           {...props}
           size={props?.size ?? 'small'}
         />
@@ -45,16 +45,16 @@ export default function Navigation(props: NavigationProps) {
 }
 
 export function RowNavigation(props: NavigationProps) {
-  let { children, href, defaultstyle, size, icon } = props
+  let { children, href, className, size, icon } = props
 
   if (size === 'small') {
-    defaultstyle += 'text-sm'
+    className += 'text-sm'
   } else {
-    defaultstyle += 'text-base'
+    className += 'text-base'
   }
 
   return (
-    <a className={`${defaultstyle} flex-row`} href={href}>
+    <a className={`${className} flex-row`} href={href}>
       <div>{icon}</div>
       <p className="font-inter font-semibold">{children}</p>
     </a>
@@ -62,16 +62,16 @@ export function RowNavigation(props: NavigationProps) {
 }
 
 export function ColumnNavigation(props: NavigationProps) {
-  let { children, href, defaultstyle, size, icon } = props
+  let { children, href, className, size, icon } = props
 
   if (size === 'small') {
-    defaultstyle += 'text-sm'
+    className += 'text-sm'
   } else {
-    defaultstyle += 'text-base'
+    className += 'text-base'
   }
 
   return (
-    <a className={`${defaultstyle} flex-col`} href={href}>
+    <a className={`${className} flex-col`} href={href}>
       <div>{icon}</div>
       <p className="font-inter font-semibold">{children}</p>
     </a>

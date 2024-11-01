@@ -8,7 +8,7 @@ interface TagToggleProps extends TagProps {
 }
 
 export default function TagToggle(props: TagToggleProps) {
-  const { defaultstyle, icon, children, quantity } = props
+  const { className, icon, children, quantity } = props
   const [activeIndex, setActiveIndex] = useState(0)
 
   function handleActiveTag(index: number) {
@@ -20,7 +20,7 @@ export default function TagToggle(props: TagToggleProps) {
     <div className="flex flex-row gap-6">
       {Array.from({ length: quantity }, (_, index) => (
         <div
-          className={`${defaultstyle} ${activeIndex === index ? 'bg-[#2C2C2C] text-white' : 'bg-[#F5F5F5] text-[#757575]'} flex h-8 w-auto items-center gap-2 rounded-lg p-2`}
+          className={`${className} ${activeIndex === index ? 'bg-[#2C2C2C] text-white' : 'bg-[#F5F5F5] text-[#757575]'} flex h-8 w-auto items-center gap-2 rounded-lg p-2`}
           onClick={() => handleActiveTag(index)}
           key={index}
         >

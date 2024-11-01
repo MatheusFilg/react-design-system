@@ -58,28 +58,28 @@ export function OverlapAvatarList() {
         size="large"
         format="circle"
         type="image"
-        defaultstyle="shadow-md shadow-[#0C0C0D80]"
+        className="shadow-md shadow-[#0C0C0D80]"
       />
       <Avatar
         src="https://github.com/MatheusFilg.png"
         size="large"
         format="circle"
         type="image"
-        defaultstyle="-translate-x-2 shadow-md shadow-[#0C0C0D80]"
+        className="-translate-x-2 shadow-md shadow-[#0C0C0D80]"
       />
       <Avatar
         src="https://github.com/MatheusFilg.png"
         size="large"
         format="circle"
         type="image"
-        defaultstyle="-translate-x-4 shadow-md shadow-[#0C0C0D80]"
+        className="-translate-x-4 shadow-md shadow-[#0C0C0D80]"
       />
       <Avatar
         src="https://github.com/MatheusFilg.png"
         size="large"
         format="circle"
         type="image"
-        defaultstyle="-translate-x-6 shadow-md shadow-[#0C0C0D80]"
+        className="-translate-x-6 shadow-md shadow-[#0C0C0D80]"
       />
     </div>
   )
