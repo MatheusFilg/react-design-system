@@ -59,10 +59,10 @@ export function ImageAvatar(props: AvatarProps) {
   }
 
   if (format === 'square') {
-    defaultstyle += ' rounded-lg '
+    defaultstyle += ' rounded-lg'
   }
   if (format === 'circle') {
-    defaultstyle += ' rounded-full '
+    defaultstyle += ' rounded-full'
   }
 
   return (
