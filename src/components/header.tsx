@@ -24,6 +24,10 @@ export function Header() {
       <a href="/tooltip" className="hover:underline">
         Tooltip
       </a>
+
+      <a href="/notification" className="hover:underline">
+        Notification
+      </a>
     </div>
   )
 }

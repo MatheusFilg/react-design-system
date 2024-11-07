@@ -60,9 +60,9 @@ export function DefaultButton(props: ButtonProps) {
   let { children, className, disabledstyle, size } = props
 
   if (size === 'medium') {
-    className += 'w-18 h-10 p-3 text-base'
+    className += ' w-18 h-10 p-3 text-base'
   } else {
-    className += 'w-16 h-8 p-2 text-sm'
+    className += ' w-16 h-8 p-2 text-sm'
   }
 
   return (
