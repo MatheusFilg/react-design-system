@@ -10,7 +10,7 @@ interface ButtonDangerProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export default function ButtonDanger(props: ButtonDangerProps) {
   const style =
-    'flex items-center border gap-4 rounded-lg font-inter font-normal items-center justify-center '
+    'flex items-center border gap-4 font-inter font-normal items-center justify-center '
   const disable =
     ' disabled:border-[#B3B3B3] disabled:bg-[#D9D9D9] disabled:text-[#B3B3B3]'
 
@@ -59,7 +59,7 @@ export function DefaultButton(props: ButtonDangerProps) {
   return (
     <button
       {...props}
-      className={`${disabledstyle} ${className} border-[#C00F0C] bg-[#EC221F] text-white hover:border-[#900B09] hover:bg-[#C00F0C]`}
+      className={`${disabledstyle} ${className} rounded-lg border-[#C00F0C] bg-[#EC221F] text-white hover:border-[#900B09] hover:bg-[#C00F0C]`}
     >
       <span>{children}</span>
     </button>
@@ -78,7 +78,7 @@ export function GhostButton(props: ButtonDangerProps) {
   return (
     <button
       {...props}
-      className={`${disabledstyle} ${className} border-transparent text-[#900B09] hover:border hover:border-[#900B09] hover:bg-[#FDD3D0]`}
+      className={`${disabledstyle} ${className} rounded-lg border-transparent text-[#900B09] hover:border hover:border-[#900B09] hover:bg-[#FDD3D0]`}
     >
       <span>{children}</span>
     </button>
