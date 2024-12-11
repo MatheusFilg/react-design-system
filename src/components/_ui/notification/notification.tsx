@@ -1,4 +1,4 @@
-import { HTMLAttributes, ReactNode } from 'react'
+import { HTMLAttributes } from 'react'
 
 import Cancel from '../../../assets/icons/Cancel'
 import Info from '../../../assets/icons/Info'
@@ -48,8 +48,8 @@ export function DefaultNotification(props: NotificationProps) {
   )
 }
 
-export function AlertNotification(props: NotificationProps) {
-  const { className, title, text } = props
+export function AlertNotification() {
+  // const { className, title, text } = props
   return (
     <div>
       <h1>oi</h1>
