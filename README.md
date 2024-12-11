@@ -1,4 +1,4 @@
-# Design System - Figma (Em construção)
+# Design System - Figma
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/MatheusFilg/react-design-system)
 ![GitHub language count](https://img.shields.io/github/languages/count/MatheusFilg/react-design-system)
@@ -14,7 +14,7 @@
 O projeto foi desenvolvido mas poderia melhorar em alguns pontos:
 
 - [ ] Maior reutilização dos componentes que foram desenvolvidos;
-- [ ] Adição de mais componentes (Em andamento);
+- [ ] Adição de mais componentes;
 
 ## 📫 Contribuindo para o Design System:
 
