@@ -49,8 +49,8 @@ export function DefaultNotification(props: NotificationProps) {
   )
 }
 
-export function AlertNotification() {
-  // const { className, title, text } = props
+export function AlertNotification(props: NotificationProps) {
+  const { className, title, text } = props
   return (
     <div
       className={`${className} gap-3 border-[#EC221F] bg-[#FEE9E7] text-[#900B09]`}
